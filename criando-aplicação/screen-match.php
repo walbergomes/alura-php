@@ -5,7 +5,13 @@ echo "Bem vindo ao Screen Match!
 
 $nomeFilme = "Top Gun - Maverick";
 $anoLancamento = 2022;
-$notaFilme = 8.8;
-$incluidoNoPlano = true;
 
-echo $nomeFilme;
+$somaDeNotas = 8.8 + 9 + 4 + 7 + 7.7;
+$notaFilme = $somaDeNotas / 5;
+
+$planoPrime = false;
+
+$incluidoNoPlano = $planoPrime || $anoLancamento < 2020;
+
+
+echo $notaFilme;
