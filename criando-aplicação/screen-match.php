@@ -6,10 +6,16 @@ $nomeFilme = "Top Gun - Maverick";
 $nomeFilme = "Thor Ragnarock";
 $nomeFilme = "Se beber não case";
 
-$anoLancamento = $argv[1] ?? 2022;
+$anoLancamento = 2022;
 
-$somaDeNotas = 8.8 + 9 + 4 + 7 + 7.7;
-$notaFilme = $somaDeNotas / 5;
+$quantidadeDeNotas = $argc - 1;
+$somaDeNotas = 0;
+
+for ($contador = 1; $contador < $argc; $contador++) {
+  $somaDeNotas += $argv[$contador];
+}
+
+$notaFilme = $somaDeNotas / $quantidadeDeNotas;
 
 $planoPrime = false;
 
@@ -27,4 +33,4 @@ $genero = match($nomeFilme) {
   default => "gênero desconhecido",
 };
 
-echo "O gênero do filme é: $genero";
+echo "O gênero do filme é: $genero \n";
