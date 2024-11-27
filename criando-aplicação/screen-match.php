@@ -15,13 +15,7 @@ for ($contador = 1; $contador < $argc; $contador++) {
   $notas[] = (float) $argv[$contador];
 }
 
-$somaDeNotas = 0;
-
-foreach($notas as $nota) {
-  $somaDeNotas += $nota;
-}
-
-$notaFilme = $somaDeNotas / $quantidadeDeNotas;
+$notaFilme = array_sum($notas) / $quantidadeDeNotas;
 
 $planoPrime = false;
 
