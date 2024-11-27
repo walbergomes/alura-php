@@ -9,10 +9,16 @@ $nomeFilme = "Se beber não case";
 $anoLancamento = 2022;
 
 $quantidadeDeNotas = $argc - 1;
-$somaDeNotas = 0;
+$notas = [];
 
 for ($contador = 1; $contador < $argc; $contador++) {
-  $somaDeNotas += $argv[$contador];
+  $notas[] = (float) $argv[$contador];
+}
+
+$somaDeNotas = 0;
+
+for($i = 0; $i < count($notas); $i++) {
+  $somaDeNotas += $notas[$i];
 }
 
 $notaFilme = $somaDeNotas / $quantidadeDeNotas;
