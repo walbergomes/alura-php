@@ -55,4 +55,10 @@ $filme = [
 ];
 
 
-echo $filme["ano"];
+var_dump($filme["ano"]);
+
+var_dump($filme['nome']);
+
+$posicaoDoisPontos = strpos($filme['nome'], ":");
+
+var_dump(substr($filme['nome'], 0, $posicaoDoisPontos));
