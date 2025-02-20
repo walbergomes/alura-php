@@ -6,11 +6,11 @@ class Filme {
   public string $genero;
   public array $notas = [];
 
-  function avalia(float $nota) : void {
+  public function avalia(float $nota) : void {
     $this->notas[] = $nota;
   }
 
-  function media() : float {
+  public function media() : float {
     $somaNotas = array_sum($this->notas);
     $quantidadeNotas = count($this->notas);
 
