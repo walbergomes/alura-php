@@ -1,0 +1,1 @@
+<h1>Parabéns, o filme <?php echo $_GET["filme"]; ?> foi adicionado!</h1>
