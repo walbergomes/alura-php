@@ -8,27 +8,13 @@ class Filme
   // esse parâmetro é promovido a propriedade
   // só funciona no construtor
   public function __construct( 
-    private string $nome,
-    private int $anoLancamento,
-    private string $genero
+    public readonly string $nome,
+    public readonly int $anoLancamento,
+    public readonly string $genero
   ) {
    $this->notas = [];
   }
   
-  // Método getter
-  public function anoLancamento(): int {
-    return $this->anoLancamento;
-  }
-
-  public function nome(): int {
-    return $this->nome;
-  }
-
-  public function genero(): int {
-    return $this->genero;
-  }
-
-  // ----
   public function avalia($nota) {
     $this->notas[] = $nota; 
   }
