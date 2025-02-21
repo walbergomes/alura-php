@@ -11,4 +11,9 @@ class Filme extends Titulo
     // A palavra reservada parent permite o acesso de métodos da classe base/mãe
     parent::__construct($nome, $anoLancamento, $genero);
   }
+
+  public function duracaoEmMinutos(): int
+  {
+    return $this->duracaoEmMinutos;
+  }
 }
