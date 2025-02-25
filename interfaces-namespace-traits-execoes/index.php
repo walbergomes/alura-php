@@ -10,6 +10,9 @@ require __DIR__ . "/src/Modelo/Filme.php";
 require __DIR__ . "/src/Calculos/CalculadoraDeMaratona.php";
 require __DIR__ . "/src/Calculos/ConversorNotaEstrela.php";
 
+use ScreenMatch\Modelo\{Filme, Episodio, Serie, Genero};
+use ScreenMatch\Calculos\{CalculadoraDeMaratona, ConversorNotaEstrela};
+
 echo "Bem-vindo(a) ao ScreenMatch\n";
 
 $filme = new Filme(
