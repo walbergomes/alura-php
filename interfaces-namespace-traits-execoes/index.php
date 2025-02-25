@@ -1,14 +1,6 @@
 <?php
 
-require __DIR__ . "/src/Modelo/ComAvalicao.php";
-require __DIR__ . "/src/Modelo/Avaliavel.php";
-require __DIR__ . "/src/Modelo/Genero.php";
-require __DIR__ . "/src/Modelo/Titulo.php";
-require __DIR__ . "/src/Modelo/Episodio.php";
-require __DIR__ . "/src/Modelo/Serie.php";
-require __DIR__ . "/src/Modelo/Filme.php";
-require __DIR__ . "/src/Calculos/CalculadoraDeMaratona.php";
-require __DIR__ . "/src/Calculos/ConversorNotaEstrela.php";
+require 'auload.php';
 
 use ScreenMatch\Modelo\{Filme, Episodio, Serie, Genero};
 use ScreenMatch\Calculos\{CalculadoraDeMaratona, ConversorNotaEstrela};
