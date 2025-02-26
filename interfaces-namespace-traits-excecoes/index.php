@@ -1,6 +1,6 @@
 <?php
 
-require 'auload.php';
+require 'autoload.php';
 
 use ScreenMatch\Modelo\{Filme, Episodio, Serie, Genero};
 use ScreenMatch\Calculos\{CalculadoraDeMaratona, ConversorNotaEstrela};
