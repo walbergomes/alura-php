@@ -1,20 +1,20 @@
 <?php
 
 require 'vendor/autoload.php';
+require 'src/Buscador.php';
 
 use GuzzleHttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
 
-$client = new Client();
-$response = $client->request(method: 'GET', uri: 'https://www.cnnbrasil.com.br/');
+use Alura\BuscadorDeNoticias\Buscador;
 
-$html = $response->getBody();
-
+$client = new Client(['base_uri' => 'https://www.cnnbrasil.com.br/']);
 $crawler = new Crawler();
-$crawler->addHtmlContent($html);
 
-$cursos = $crawler->filter(selector: 'h3.block__news__title');
 
-foreach ($cursos as $curso) {
-    echo $curso->textContent . PHP_EOL;
+$buscador = new Buscador($client, $crawler);
+$noticias = $buscador->buscar('/');
+
+foreach ($noticias as $noticia) {
+    echo $noticia . PHP_EOL;
 }
