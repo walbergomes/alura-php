@@ -1,5 +1,6 @@
 <?php
 
-$pdo = new PDO(dsn: 'sqlite:banco.sqlite');
+$caminhoBanco = __DIR__ . 'banco.sqlite';
+$pdo = new PDO(dsn: 'sqlite:' . $caminhoBanco);
 
 echo 'Conectei';
