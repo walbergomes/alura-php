@@ -9,14 +9,14 @@ $pdo = new PDO(dsn: 'sqlite:' . $databasePath);
 
 $student = new Student(
     null,
-    "Walber' ''); DROP TABLE students; -- Gomes",
+    "Mariazinha da Silva Furtada",
     new \DateTimeImmutable('2002-01-01')
 );
 
-$sqlInset = "INSERT INTO students (name, birth_date) VALUES (?, ?);";
+$sqlInset = "INSERT INTO students (name, birth_date) VALUES (:name, :birth_date);";
 $statement = $pdo->prepare($sqlInset);
-$statement->bindValue(1, $student->name());
-$statement->bindValue(2, $student->birthDate()->format('Y-m-d'));
+$statement->bindValue(':name', $student->name());
+$statement->bindValue(':birth_date', $student->birthDate()->format('Y-m-d'));
 
 if ($statement->execute()) {
     echo "Aluno incluído";
